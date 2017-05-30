@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>assignment3</title>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#div1').click(function(){
+          $('#div3,#div5').hide();
+        });
+        $('#div2').click(function(){
+          $('#div4,#div6').hide();
+          $('#div3').show();
+        });
+        $('#div3').click(function(){
+          $('#div1,#div2').hide();
+          $('#div4,#div5').show();
+        });
+        $('#div4').click(function(){
+          $('#div3').hide();
+          $('#div1,#div6').show();
+        });
+        $('#div5').click(function(){
+          $('#div4').hide();
+          $('#div2,#div3').show();
+        });
+        $('#div6').click(function(){
+          $('#div4').show();     
+        })
+      });
+
+    </script>
+  </head>
+  <body>
+    <div style="width:300px;height:200px; background-color:skyblue; margin: 30px; float:left;" id="div1">
+      1
+    </div>
+    <div style="width:300px;height:200px; background-color:blue; margin: 30px; float:left;" id="div2">
+      2
+    </div>
+    <div style="width:300px;height:200px; background-color:red; margin: 30px; float:left;" id="div3">
+      3
+    </div>
+    <div style="width:300px;height:200px; background-color:orange; margin: 30px; float:left;" id="div4">
+      4
+    </div>
+    <div style="width:300px;height:200px; background-color:pink; margin: 30px; float:left;" id="div5">
+      5
+    </div>
+    <div style="width:300px;height:200px; background-color:yellow; margin: 30px; float:left;" id="div6">
+      6
+    </div>
+  </body>
+</html>
