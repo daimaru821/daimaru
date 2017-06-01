@@ -1,0 +1,80 @@
+#header{
+  background-color: #425F9C;
+}
+
+#logo{
+  text-align: center;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+#label1{
+  color: #ffffff;
+}
+
+#label2{
+  color: #ffffff;
+}
+
+#facebookImage{
+  height: 570px; width: 540px;
+}
+
+#email ,#password{
+  color: #ffffff;
+}
+
+#whybirth{
+  font-size: 10px;
+  margin-left: 40px;
+}
+
+#signup{
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn1{
+  font-weight: bold;
+  padding: 3px 40px;
+  font-size: 20px;
+  margin-left: -10px;
+}
+
+td{
+  padding: 14px;
+}
+
+.form-control{
+  margin: 10px;
+  margin-left: -10px;
+}
+
+select.selectpicker{
+  margin-top:20px;
+}
+
+#btn{
+  background: lightblue;
+}
+
+#signuph1{
+  font-weight: bold;
+}
+
+body{
+  height: 100%;
+  background: linear-gradient(white, gray);
+}
+
+footer{
+  background-color: white;
+}

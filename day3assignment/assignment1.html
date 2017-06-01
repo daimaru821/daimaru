@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>assignment</title>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#btn').click(function(){
+          var name = $('#name').val();
+           $('#uname').text(name);
+          var email = $('#email').val();
+            $('#uemail').text(email);
+          var phone = $('#phone').val();
+            $('#uphone').text(phone);
+          var password = $('#password').val();
+            $('#upassword').text(password);
+          var city = $('#city').val();
+            $('#ucity').text(city);
+          var city = $('#city').val();
+            $('#ucity').text(city);
+          var day = $('#day').val();
+          var month = $('#month').val();
+          var year= $('#year').val();
+          var birth = day + "/" + month  + "/" + year
+            $('#ubirthday').text(birth);
+          // var sex = $('#male').val();
+          // var sex1 = $('#female').val();
+          // var sex2 = sex + sex1
+          var sex = $("[name=sex]:checked").val();
+            $('#usex').text(sex);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>form</th>
+        <th>result</th>
+      </tr>
+       <tr>
+         <td><input type="text" id="name" placeholder="text"><br>
+             <input type="email" id="email" placeholder="email"><br>
+             <input type="phone" id="phone" placeholder="phone"><br>
+             <input type="password" id="password" placeholder="password"><br>
+             <input type="text" id="city" placeholder="city"><br>
+             <select id="day">
+               <option>day</option>
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select>
+             <select id="month">
+               <option>month</option>
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select>
+             <select id="year">
+               <option>year</option>
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select><br>
+             male<input id="male" type="radio" name="sex" value="male">
+             female<input id="female" type="radio" name="sex" value="female"><br>
+              <input type="button" id="btn" value="button">
+        </td>
+         <td><p>my name is <span id="uname"></span></p>
+             <p>my Email is <span id="uemail"></span></p>
+             <p>my Phone is <span id="uphone"></span></p>
+             <p>my pass is <span  id="upassword"></span></p>
+             <p>my city is <span id="ucity"></span></p>
+             <p>my birth day is <span id="ubirthday"></span></p>
+             <p>my sex is <span  id="usex"></span></p>
+          </td>
+       </tr>
+    </table>
+  </body>
+</html>
