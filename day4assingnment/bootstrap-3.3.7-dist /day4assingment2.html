@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Bootstrap -->
+　　<link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <link  rel="stylesheet" type="text/css" href="css/style2.css">
+   <script src="jquery.js"></script>
+   <script>
+     $(document).ready(function(){
+
+      var number1="0";
+      var number2=0;
+      var opr = "";
+       $('.number').click(function(){
+　　　　　 var temp = $(this).val();
+         if(number1=="0")
+         {
+           number1 = temp;
+         }
+         else {
+           number1 = number1+temp;
+         }
+
+         if(number2 == 0)
+         {
+             $('#f_num1').text(number1);
+         }
+         else {
+           $('#f_num2').text(number1);
+         }
+      });
+
+
+      $('.calcurate').click(function(){
+        opr = $(this).val();
+        $('#calcurate').text(opr);
+        number2 = number1;
+        number1 = "0";
+      });
+
+
+       $('#btn').click(function(){
+
+       if(opr == "÷"){
+        var total1 = number2 / number1;
+        $('#total').text(total1);
+        }else if (opr == "×") {
+            var total2 = number1 * number2;
+          $('#total').text(total2);
+        }else if (opr == "+") {
+            var total3 = parseInt(number1) + parseInt(number2);
+          $('#total').text(total3);
+        }else if (opr = "-") {
+            var total4 = number1 - number2;
+          $('#total').text(total4);
+        }
+     });
+     //
+     //
+    //  $('#AC').click(function(){
+    //    $('#number1').val('');
+    //    $('#number2').val('');
+    //    $('#calcurate').val('');
+    //    $('#total').val('');
+    //  });
+
+     });
+   </script>
+  </head>
+  <body>
+
+
+      <header  id="header">
+        ASSIGNMENT CALCULATER Using JaScript or Jquery
+      </header>
+
+
+      <div class="container-fluid">
+
+
+        <h2>CALCULATER</h2>
+
+              <div class="row" id="table">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                    <form>
+                     <div class="boxContainer">
+                       <button type="button" class="number" id="7" value="7">7</button>
+                       <button type="button" class="number" id="8" value="8">8</button>
+                       <button type="button" class="number" id="9" value="9">9</button>
+                       <button type="button" class="calcurate" id="divide" value="÷">÷</button>
+                    </div>
+                    <div class="boxContainer">
+                      <button type="button" class="number" id="4" value="4">4</button>
+                      <button type="button" class="number" id="5" value="5">5</button>
+                      <button type="button" class="number" id="6" value="6">6</button>
+                      <button type="button" class="calcurate" id="multi" value="×">×</button>
+                   </div>
+                   <div class="boxContainer">
+                     <button type="button" class="number" id="1" value="1">1</button>
+                     <button type="button" class="number" id="2" value="2">2</button>
+                     <button type="button" class="number" id="3" value="3">3</button>
+                     <button type="button" class="calcurate" id="minus" value="-">-</button>
+                  </div>
+                  <div class="boxContainer">
+                    <button type="button" class="number" id="0" value="0">0</button>
+                    <button type="button" class="ac" id="AC" value="AC">AC</button>
+                    <button type="button" class="calcurate" id="plus" value="+">+</button>
+                 </div>
+               </form>
+                    </div>
+                    <div class="col-md-4"></div>
+              </div>
+
+
+          <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <table>
+                    <tr>
+                      <td>1. ENTER THE FIRST NUMBER</td>
+                      <td>:	</td>
+                      <td><span id="f_num1"></span></td>
+                    </tr>
+                    <tr>
+                      <td>2. SELECT HOW TO CALCULATE</td>
+                      <td>:	</td>
+                      <td><span id="calcurate"></span></td>
+                    </tr>
+                    <tr>
+                      <td>3. ENTER THE SECOND NUMBER	</td>
+                      <td>:</td>
+                      <td><span id="f_num2"></span></td>
+                    </tr>
+                    <tr>
+                      <td>4. ENTER	<button type="button" id="btn">HERE</button>	(TOTAL)</td>
+                      <td>:</td>
+                      <td><span id="total"></span></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="col-md-2"></div>
+        </div>
+     </div>
+
+  </body>
+</html>

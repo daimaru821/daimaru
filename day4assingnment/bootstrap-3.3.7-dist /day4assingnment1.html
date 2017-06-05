@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Bootstrap -->
+　　<link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <link  rel="stylesheet" type="text/css" href="css/style1.css">
+
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('#rupees').blur(function(){
+       var rupees = $('#rupees').val();
+       var a = rupees/67*0.78;
+        var d= rupees/67*100;
+       $('#yen').val(rupees/67*100);
+       $('#dollor').val(rupees/67);
+       $('#pound').val(a.toFixed(4));
+      });
+      $('#yen').blur(function(){
+       var yen = $('#yen').val();
+       var b = yen/100*0.78;
+       $('#rupees').val(yen/100*67);
+       $('#dollor').val(yen/100);
+       $('#pound').val(b.toFixed(4));
+      });
+      $('#dollor').blur(function(){
+       var dollor = $('#dollor').val();
+       var c = dollor*0.78;
+       $('#rupees').val(dollor*67);
+       $('#yen').val(dollor*100);
+       $('#pound').val(c.toFixed(4));
+      });
+      $('#pound').blur(function(){
+      var pound = $('#pound').val();
+      var d = pound*0.78;
+      $('#dollor').val(d.toFixed(4));
+      $('#yen').val(pound*100/0.78);
+      $('#rupees').val(pound*67/0.78);
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <header>
+      <div  class="row header" >
+        <h1 id="title">currency converter</h1>
+      </div>
+    </header>
+    <div class="container">
+    <form class="form-horizontal">
+      <div class="row">
+        <div class="form-group">
+            <div class="col-md-2"></div>
+            <label class="col-md-2" id="label1">Enter the Rupees</label>
+            <div class="col-md-4">
+                <input id="rupees" type="text" name="name" class="form-control" placeholder="Rupees">
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-2"></div>
+            <label class="col-md-2" id="label2">Enter the Yen</label>
+            <div class="col-md-4">
+                <input id="yen" type="text" name="name" class="form-control" placeholder="Yen">
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-2"></div>
+            <label class="col-md-2" id="label3">Enter the Dollor</label>
+            <div class="col-md-4">
+                <input id="dollor" type="text" name="name" class="form-control" placeholder="Dollor">
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-2"></div>
+            <label class="col-md-2" id="label4">Enter the Pound</label>
+            <div class="col-md-4">
+                <input id="pound" type="text" name="name" class="form-control" placeholder="Pound">
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+    </form>
+</div>
+
+   </div>
+  </body>
+</html>

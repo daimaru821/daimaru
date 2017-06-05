@@ -1,0 +1,95 @@
+
+body{
+   background-color: #E0E6F8;
+}
+
+#header{
+  background-color: blue;
+  color:white;
+  text-align: center;
+  margin-top: -20px;
+  width: 100%;
+}
+
+h2{
+  text-align: center;
+  color: blue;
+  font-family: impact;
+  font-size: 40px;
+}
+
+.number{
+  width: 60px;
+  height: 60px;
+  background-color: #A4A4A4;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  float: left;
+  border-radius: 10px ;
+  line-height: 60px;
+  margin: 2px;
+}
+
+.calcurate{
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  float: left;
+  border-radius: 10px ;
+  line-height: 60px;
+  margin: 2px;
+}
+
+#plus{
+width: 125px;
+}
+
+#table{
+  margin-left: 100px;
+}
+
+.boxContainer{
+ overflow: hidden;
+}
+
+.btn{
+  background-color: red;
+  border: 1px white;
+  font-size: 18px;
+  font-family: impact;
+}
+
+td{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+table{
+  margin-left: 80px;
+}
+
+.ac{
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  float: left;
+  border-radius: 10px ;
+  line-height: 60px;
+  margin: 2px;
+}
+
+
+#btn{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+}
